@@ -35,7 +35,7 @@ public class WebController {
 	@Autowired
 	EmployeeRepository employeeRepository;
 	
-	@GetMapping("/")
+	// @GetMapping("/")
 	public String WELCOME() {
 		logger.info("Create log for testing");
 		return "Greeting friends";
