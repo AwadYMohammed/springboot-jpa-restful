@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+    name: "awadkube-7134"
+    labels:
+        app: "awadkube-7134"
+    annotations:
+        kubernetes.io/ingress.class: addon-http-application-routing
+spec:
+    rules:
+        - host: awadkubea825-awadkube-7134.f60d2ba9fff44d6d9dae.eastus2.aksapp.io
+          http:
+            paths:
+            - path: /
+              backend:
+                serviceName: "awadkube-7134"
+                servicePort: 80
