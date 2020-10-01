@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: awadimage 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: awadimage
+  template:
+    metadata:
+      labels:
+        app: awadimage 
+    spec:
+      containers:
+        - name: awadimage 
+          image: awadcontainerregistry.azurecr.io/awadimage
+          ports:
+          - containerPort: 80
